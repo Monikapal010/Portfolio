@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d26f9b67.css",
+    "main.js": "/static/js/main.aee8db1c.js",
+    "static/media/codeclash.pdf": "/static/media/codeclash.5451bb2ed0e582233668.pdf",
+    "static/media/Monika_Pal_Resume.pdf": "/static/media/Monika_Pal_Resume.2d1067c776ac343c6ef3.pdf",
+    "static/media/NaukriCampus_Certificate_Participation.pdf": "/static/media/NaukriCampus_Certificate_Participation.22db05dea8121c208f46.pdf",
+    "index.html": "/index.html",
+    "main.d26f9b67.css.map": "/static/css/main.d26f9b67.css.map",
+    "main.aee8db1c.js.map": "/static/js/main.aee8db1c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d26f9b67.css",
+    "static/js/main.aee8db1c.js"
+  ]
+}
