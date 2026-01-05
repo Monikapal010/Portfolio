@@ -1,30 +1,32 @@
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
-const path = require("path");
+const path=require('path')
 
-// dotenv configuration
+//dotenv configuartion
 dotenv.config();
 
-// app init
+//rest object
 const app = express();
 
-// middlewares
+//midlewares
 app.use(cors());
 app.use(express.json());
 
-// API routes
+//static files
+app.use(express.static(path.join(__dirname,'./client/build')))
+
+//routes
 app.use("/api/v1/portfolio", require("./routes/portfolioRoute"));
 
-// serve React build
-app.use(express.static(path.join(__dirname, "client/build")));
+app.get('*',function(req,res){
+  res.sendFile(path.join(__dirname,'./client/build/index.html'))
+})
 
-app.get("*", (req, res) => {
-  res.sendFile(
-    path.join(__dirname, "client/build", "index.html")
-  );
+//port
+const PORT = process.env.PORT || 8080;
+
+//listen
+app.listen(PORT, () => {
+  console.log(`Server Runnning On PORT ${PORT} `);
 });
-
-// ❌ DO NOT use app.listen()
-// ✅ EXPORT app for Vercel
-module.exports = app;
